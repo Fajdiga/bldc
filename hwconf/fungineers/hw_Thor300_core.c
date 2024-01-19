@@ -256,7 +256,7 @@ bool hw_sample_shutdown_button(void) {
 	bt_diff = (bt_diff + ADC_VOLTS(ADC_IND_SHUTDOWN))/2;
 	chMtxUnlock(&shutdown_mutex);
 
-	if(bt_diff > 2.25){
+	if(bt_diff > 2.4){
 		pressed_time += 12;
 		return true;
 	}else{
